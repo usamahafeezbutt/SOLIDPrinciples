@@ -16,19 +16,5 @@ namespace SOLIDPrinciples
             int userId = userService.Login(user.Username, user.Password);
             Console.WriteLine(userId > 0 ? "Login Successful" : "Login Failed");
         }
-        public static void UpdateEmployeeSalary(List<Employee> employees)
-        {
-            foreach (var employee in employees)
-            {
-                Console.WriteLine($"Updated salary of {employee.Name} is {employee.UpdateSalary(10000)}");
-            }
-        }
-        public static void AddBenefitsInEmployeeSalary(List<IEmployeeBenefit> employees)
-        {
-            foreach (var employee in employees)
-            {
-                employee.AddBenefitsInSalary();
-            }
-        }
     }
 }
